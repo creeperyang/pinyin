@@ -118,7 +118,7 @@ const PINYINS = [
   'NAN', 'NANG', 'NAO', 'NE', 'NEI', 'NEN',
   'NENG', 'NI', 'NIAN', 'NIANG', 'NIAO', 'NIE',
   'NIN', 'NING', 'NIU', 'NONG', 'NOU', 'NU', 'NV', // add NV
-  'NUAN', 'NUE', 'NUN', 'NA', 'NUO', 'O', 'OU', // add NA
+  'NUAN', 'NVE', 'NUN', 'NA', 'NUO', 'O', 'OU', // add NA
   'PA', 'PAI', 'PAN', 'PANG', 'PAO', 'PEI',
   'PEN', 'PENG', 'PI', 'PIAN', 'PIAO', 'PIE',
   'PIN', 'PING', 'PO', 'POU', 'PU', 'QI', 'XI', 'QI', // Correct 蹊

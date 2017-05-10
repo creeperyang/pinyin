@@ -42,8 +42,8 @@ const UNIHANS = [
   '\u6478', '\u54de', '\u6bea', '\u55ef', '\u62cf', '\u8149',
   '\u56e1', '\u56d4', '\u5b6c', '\u7592', '\u5a1e', '\u6041',
   '\u80fd', '\u59ae', '\u62c8', '\u5a18', '\u9e1f', '\u634f', // 嬢 --> 娘
-  '\u56dc', '\u5b81', '\u599e', '\u519c', '\u7fba', '\u5974',
-  '\u597b', '\u759f', '\u9ec1', '\u90cd', '\u5594', '\u8bb4',
+  '\u56dc', '\u5b81', '\u599e', '\u519c', '\u7fba', '\u5974', '\u5973',// add 女
+  '\u597b', '\u759f', '\u9ec1', '\u90cd', '\u632a', '\u5594', '\u8bb4', // add 挪
   '\u5991', '\u62cd', '\u7705', '\u4e53', '\u629b', '\u5478',
   '\u55b7', '\u5309', '\u4e15', '\u56e8', '\u527d', '\u6c15',
   '\u59d8', '\u4e52', '\u948b', '\u5256', '\u4ec6', '\u4e03', '\u8e4a', '\u9b4c', // add 蹊,魌
@@ -117,8 +117,8 @@ const PINYINS = [
   'MO', 'MOU', 'MU', 'N', 'NA', 'NAI',
   'NAN', 'NANG', 'NAO', 'NE', 'NEI', 'NEN',
   'NENG', 'NI', 'NIAN', 'NIANG', 'NIAO', 'NIE',
-  'NIN', 'NING', 'NIU', 'NONG', 'NOU', 'NU',
-  'NUAN', 'NUE', 'NUN', 'NUO', 'O', 'OU',
+  'NIN', 'NING', 'NIU', 'NONG', 'NOU', 'NU', 'NV', // add NV
+  'NUAN', 'NUE', 'NUN', 'NA', 'NUO', 'O', 'OU', // add NA
   'PA', 'PAI', 'PAN', 'PANG', 'PAO', 'PEI',
   'PEN', 'PENG', 'PI', 'PIAN', 'PIAO', 'PIE',
   'PIN', 'PING', 'PO', 'POU', 'PU', 'QI', 'XI', 'QI', // Correct 蹊

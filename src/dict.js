@@ -24,7 +24,7 @@ const UNIHANS = [
   '\u6208', '\u7ed9', '\u6839', '\u522f', '\u5de5', '\u52fe',
   '\u4f30', '\u74dc', '\u4e56', '\u5173', '\u5149', '\u5f52',
   '\u4e28', '\u5459', '\u54c8', '\u548d', '\u4f44', '\u592f',
-  '\u8320', '\u8bc3', '\u9ed2', '\u62eb', '\u4ea8', '\u5677',
+  '\u8320', '\u8bc3', '\u86b5', '\u9f81', '\u9ed2', '\u62eb', '\u4ea8', '\u5677', // add 蚵,龁
   '\u53ff', '\u9f41', '\u4e4e', '\u82b1', '\u6000', '\u72bf', // \u4e6f-->\u4e4e
   '\u5ddf', '\u7070', '\u660f', '\u5419', '\u4e0c', '\u52a0',
   '\u620b', '\u6c5f', '\u827d', '\u9636', '\u5dfe', '\u5755',
@@ -99,7 +99,7 @@ const PINYINS = [
   'GE', 'GEI', 'GEN', 'GENG', 'GONG', 'GOU',
   'GU', 'GUA', 'GUAI', 'GUAN', 'GUANG', 'GUI',
   'GUN', 'GUO', 'HA', 'HAI', 'HAN', 'HANG',
-  'HAO', 'HE', 'HEI', 'HEN', 'HENG', 'HM',
+  'HAO', 'HE', 'KE', 'HE', 'HEI', 'HEN', 'HENG', 'HM', // add 蚵,龁
   'HONG', 'HOU', 'HU', 'HUA', 'HUAI', 'HUAN',
   'HUANG', 'HUI', 'HUN', 'HUO', 'JI', 'JIA',
   'JIAN', 'JIANG', 'JIAO', 'JIE', 'JIN', 'JING',

@@ -35,7 +35,7 @@ const UNIHANS = [
   '\u5783', '\u6765', '\u5170', '\u5577', '\u635e', '\u808b',
   '\u52d2', '\u5d1a', '\u5215', '\u4fe9', '\u5941', '\u826f',
   '\u64a9', '\u5217', '\u62ce', '\u5222', '\u6e9c', '\u56d6',
-  '\u9f99', '\u779c', '\u565c', '\u5a08', '\u7567', '\u62a1',
+  '\u9f99', '\u779c', '\u565c', '\u9a74', '\u5a08', '\u7567', '\u62a1', //\u9a74,驴
   '\u7f57', '\u5463', '\u5988', '\u57cb', '\u5ada', '\u7264',
   '\u732b', '\u4e48', '\u5445', '\u95e8', '\u753f', '\u54aa',
   '\u5b80', '\u55b5', '\u4e5c', '\u6c11', '\u540d', '\u8c2c',
@@ -110,7 +110,7 @@ const PINYINS = [
   'LA', 'LAI', 'LAN', 'LANG', 'LAO', 'LE',
   'LEI', 'LENG', 'LI', 'LIA', 'LIAN', 'LIANG',
   'LIAO', 'LIE', 'LIN', 'LING', 'LIU', 'LO',
-  'LONG', 'LOU', 'LU', 'LUAN', 'LUE', 'LUN',
+  'LONG', 'LOU', 'LU', 'LV', 'LUAN', 'LUE', 'LUN', // add LV
   'LUO', 'M', 'MA', 'MAI', 'MAN', 'MANG',
   'MAO', 'ME', 'MEI', 'MEN', 'MENG', 'MI',
   'MIAN', 'MIAO', 'MIE', 'MIN', 'MING', 'MIU',

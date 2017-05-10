@@ -52,7 +52,7 @@ const UNIHANS = [
   '\u590b', '\u5465', '\u7a63', '\u5a06', '\u60f9', '\u4eba',
   '\u6254', '\u65e5', '\u8338', '\u53b9', '\u909a', '\u633c',
   '\u5827', '\u5a51', '\u77a4', '\u637c', '\u4ee8', '\u6be2',
-  '\u4e09', '\u6852', '\u63bb', '\u95aa', '\u68ee', '\u50e7',
+  '\u4e09', '\u9730', '\u994a', '\u6852', '\u63bb', '\u95aa', '\u68ee', '\u50e7', // add 霰,饊
   '\u6740', '\u7b5b', '\u5c71', '\u4f24', '\u5f30', '\u5962',
   '\u7533', '\u8398', '\u6552', '\u5347', '\u5c38', '\u53ce',
   '\u4e66', '\u5237', '\u8870', '\u95e9', '\u53cc', '\u8c01',
@@ -127,7 +127,7 @@ const PINYINS = [
   'QUN', 'RAN', 'RANG', 'RAO', 'RE', 'REN',
   'RENG', 'RI', 'RONG', 'ROU', 'RU', 'RUA',
   'RUAN', 'RUI', 'RUN', 'RUO', 'SA', 'SAI',
-  'SAN', 'SANG', 'SAO', 'SE', 'SEN', 'SENG',
+  'SAN', 'XIAN', 'SAN', 'SANG', 'SAO', 'SE', 'SEN', 'SENG', // add 霰,饊
   'SHA', 'SHAI', 'SHAN', 'SHANG', 'SHAO', 'SHE',
   'SHEN', 'XIN', 'SHEN', 'SHENG', 'SHI', 'SHOU',
   'SHU', 'SHUA', 'SHUAI', 'SHUAN', 'SHUANG', 'SHUI',

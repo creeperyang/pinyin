@@ -47,7 +47,7 @@ const UNIHANS = [
   '\u5991', '\u62cd', '\u7705', '\u4e53', '\u629b', '\u5478',
   '\u55b7', '\u5309', '\u4e15', '\u56e8', '\u527d', '\u6c15',
   '\u59d8', '\u4e52', '\u948b', '\u5256', '\u4ec6', '\u4e03', '\u8e4a', '\u9b4c', // add 蹊,魌
-  '\u6390', '\u5343', '\u545b', '\u6084', '\u767f', '\u4eb2',
+  '\u6390', '\u5343', '\u545b', '\u4e2c', '\u5f37', '\u6084', '\u767f', '\u4eb2', // add 丬
   '\u9751', '\u828e', '\u4e18', '\u533a', '\u5cd1', '\u7f3a', //狅->靑,72c5->9751
   '\u590b', '\u5465', '\u7a63', '\u5a06', '\u60f9', '\u4eba',
   '\u6254', '\u65e5', '\u8338', '\u53b9', '\u909a', '\u633c',
@@ -122,7 +122,7 @@ const PINYINS = [
   'PA', 'PAI', 'PAN', 'PANG', 'PAO', 'PEI',
   'PEN', 'PENG', 'PI', 'PIAN', 'PIAO', 'PIE',
   'PIN', 'PING', 'PO', 'POU', 'PU', 'QI', 'XI', 'QI', // Correct 蹊
-  'QIA', 'QIAN', 'QIANG', 'QIAO', 'QIE', 'QIN',
+  'QIA', 'QIAN', 'QIANG', 'PAN', 'QIANG', 'QIAO', 'QIE', 'QIN', // add 丬
   'QING', 'QIONG', 'QIU', 'QU', 'QUAN', 'QUE',
   'QUN', 'RAN', 'RANG', 'RAO', 'RE', 'REN',
   'RENG', 'RI', 'RONG', 'ROU', 'RU', 'RUA',

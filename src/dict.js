@@ -16,7 +16,7 @@ const UNIHANS = [
   '\u51d1', '\u7c97', '\u6c46', '\u5d14', '\u90a8', '\u6413',
   '\u5491', '\u5446', '\u4e39', '\u5f53', '\u5200', '\u561a',
   '\u6265', '\u706f', '\u6c10', /*'\u55f2', */'\u7538', '\u5201',
-  '\u7239', '\u4e01', '\u4e1f', '\u4e1c', '\u543a', '\u53be',
+  '\u7239', '\u4e01', '\u4e1f', '\u4e1c', '\u543a', '\u53be', '\u78a1', '\u88fb',
   '\u8011', '\u5796', '\u5428', '\u591a', '\u59b8', '\u8bf6', //dui: \u8968->\u5796
   '\u5940', '\u97a5', '\u513f', '\u53d1', '\u5e06', '\u531a',
   '\u98de', '\u5206', '\u4e30', '\u8985', '\u4ecf', '\u7d11',
@@ -91,7 +91,7 @@ const PINYINS = [
   'COU', 'CU', 'CUAN', 'CUI', 'CUN', 'CUO',
   'DA', 'DAI', 'DAN', 'DANG', 'DAO', 'DE',
   'DEN', 'DENG', 'DI', /*'DIA', */'DIAN', 'DIAO',
-  'DIE', 'DING', 'DIU', 'DONG', 'DOU', 'DU',
+  'DIE', 'DING', 'DIU', 'DONG', 'DOU', 'DU', 'ZHOU', 'DU', // add 碡,裻
   'DUAN', 'DUI', 'DUN', 'DUO', 'E', 'EI',
   'EN', 'ENG', 'ER', 'FA', 'FAN', 'FANG',
   'FEI', 'FEN', 'FENG', 'FIAO', 'FO', 'FOU',

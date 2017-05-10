@@ -70,7 +70,7 @@ const UNIHANS = [
   '\u6655', '\u7b60', '\u7b7c', '\u5e00', '\u707d', '\u5142',
   '\u5328', '\u50ae', '\u5219', '\u8d3c', '\u600e', '\u5897',
   '\u624e', '\u635a', '\u6cbe', '\u5f20', '\u957f', '\u9577',
-  '\u4f4b', '\u8707', '\u8d1e', '\u4e89', '\u4e4b', '\u5cd9',
+  '\u4f4b', '\u8707', '\u8d1e', '\u4e89', '\u5e27', '\u653f', '\u4e4b', '\u5cd9', // add 帧
   '\u5ea2', '\u4e2d', '\u5dde', '\u6731', '\u6293', '\u62fd',
   '\u4e13', '\u5986', '\u96b9', '\u5b92', '\u5353', '\u4e72',
   '\u5b97', '\u90b9', '\u79df', '\u94bb', '\u539c', '\u5c0a',
@@ -145,7 +145,7 @@ const PINYINS = [
   'YUN', 'JUN', 'YUN', 'ZA', 'ZAI', 'ZAN',
   'ZANG', 'ZAO', 'ZE', 'ZEI', 'ZEN', 'ZENG',
   'ZHA', 'ZHAI', 'ZHAN', 'ZHANG', 'CHANG', 'ZHANG',
-  'ZHAO', 'ZHE', 'ZHEN', 'ZHENG', 'ZHI', 'SHI',
+  'ZHAO', 'ZHE', 'ZHEN', 'ZHENG', 'ZHEN', 'ZHENG', 'ZHI', 'SHI', // add 帧
   'ZHI', 'ZHONG', 'ZHOU', 'ZHU', 'ZHUA', 'ZHUAI',
   'ZHUAN', 'ZHUANG', 'ZHUI', 'ZHUN', 'ZHUO', 'ZI',
   'ZONG', 'ZOU', 'ZU', 'ZUAN', 'ZUI', 'ZUN',

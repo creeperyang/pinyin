@@ -110,7 +110,7 @@ const PINYINS = [
   'LA', 'LAI', 'LAN', 'LANG', 'LAO', 'LE',
   'LEI', 'LENG', 'LI', 'LIA', 'LIAN', 'LIANG',
   'LIAO', 'LIE', 'LIN', 'LING', 'LIU', 'LO',
-  'LONG', 'LOU', 'LU', 'LV', 'LUAN', 'LUE', 'LUN', // add LV
+  'LONG', 'LOU', 'LU', 'LV', 'LUAN', 'LVE', 'LUN', // add LV
   'LUO', 'M', 'MA', 'MO', 'MA', 'MAI', 'MAN', 'PAN', 'MAN', 'MANG', // add PAN,MO
   'MAO', 'ME', 'MEI', 'MEN', 'MENG', 'MI',
   'MIAN', 'MIAO', 'MIE', 'MIN', 'MING', 'MIU',

@@ -22,7 +22,7 @@ const UNIHANS = [
   '\u98de', '\u5206', '\u4e30', '\u8985', '\u4ecf', '\u7d11',
   '\u592b', '\u65ee', '\u4f85', '\u7518', '\u5188', '\u768b', // 伕 --> 夫
   '\u6208', '\u7ed9', '\u6839', '\u522f', '\u5de5', '\u52fe',
-  '\u4f30', '\u74dc', '\u4e56', '\u5173', '\u5149', '\u5f52',
+  '\u4f30', '\u74dc', '\u8052', '\u98aa', '\u4e56', '\u5173', '\u5149', '\u5f52', // add 聒,颪
   '\u4e28', '\u5459', '\u54c8', '\u548d', '\u4f44', '\u592f',
   '\u8320', '\u8bc3', '\u86b5', '\u9f81', '\u9ed2', '\u62eb', '\u4ea8', '\u5677', // add 蚵,龁
   '\u53ff', '\u9f41', '\u4e4e', '\u82b1', '\u6000', '\u72bf', // \u4e6f-->\u4e4e
@@ -97,7 +97,7 @@ const PINYINS = [
   'FEI', 'FEN', 'FENG', 'FIAO', 'FO', 'FOU',
   'FU', 'GA', 'GAI', 'GAN', 'GANG', 'GAO',
   'GE', 'GEI', 'GEN', 'GENG', 'GONG', 'GOU',
-  'GU', 'GUA', 'GUAI', 'GUAN', 'GUANG', 'GUI',
+  'GU', 'GUA', 'GUO', 'GUA', 'GUAI', 'GUAN', 'GUANG', 'GUI', // add 聒,颪
   'GUN', 'GUO', 'HA', 'HAI', 'HAN', 'HANG',
   'HAO', 'HE', 'KE', 'HE', 'HEI', 'HEN', 'HENG', 'HM', // add 蚵,龁
   'HONG', 'HOU', 'HU', 'HUA', 'HUAI', 'HUAN',

@@ -58,7 +58,7 @@ const UNIHANS = [
   '\u4e66', '\u5237', '\u8870', '\u95e9', '\u53cc', '\u813d', // 谁-->脽
   '\u542e', '\u8bf4', '\u53b6', '\u5fea', '\u635c', '\u82cf',
   '\u72fb', '\u590a', '\u5b59', '\u5506', '\u4ed6', '\u56fc',
-  '\u574d', '\u6c64', '\u5932', '\u5fd1', '\u71a5', '\u5254',
+  '\u574d', '\u6c64', '\u9967', '\u5763', '\u5932', '\u5fd1', '\u71a5', '\u5254', // add 饧,坣
   '\u5929', '\u65eb', '\u5e16', '\u5385', '\u56f2', '\u5077',
   '\u51f8', '\u6e4d', '\u63a8', '\u541e', '\u4e47', '\u7a75',
   '\u6b6a', '\u5f2f', '\u5c23', '\u5371', '\u6637', '\u7fc1',
@@ -133,7 +133,7 @@ const PINYINS = [
   'SHU', 'SHUA', 'SHUAI', 'SHUAN', 'SHUANG', 'SHUI',
   'SHUN', 'SHUO', 'SI', 'SONG', 'SOU', 'SU',
   'SUAN', 'SUI', 'SUN', 'SUO', 'TA', 'TAI',
-  'TAN', 'TANG', 'TAO', 'TE', 'TENG', 'TI',
+  'TAN', 'TANG', 'XING', 'TANG', 'TAO', 'TE', 'TENG', 'TI', // add 饧,坣
   'TIAN', 'TIAO', 'TIE', 'TING', 'TONG', 'TOU',
   'TU', 'TUAN', 'TUI', 'TUN', 'TUO', 'WA',
   'WAI', 'WAN', 'WANG', 'WEI', 'WEN', 'WENG',

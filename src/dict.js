@@ -2,6 +2,7 @@
  * Source: <https://android.googlesource.com/platform/packages/providers/ContactsProvider/+/0c49720fb3d58e346739c2ccd56ed2b739249e07/src/com/android/providers/contacts/HanziToPinyin.java>
  * Updated by creeper
  */
+'use strict'
 
 const UNIHANS = [
   '\u963f', '\u54ce', '\u5b89', '\u80ae', '\u51f9', '\u516b',

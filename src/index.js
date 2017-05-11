@@ -1,7 +1,8 @@
-const {
-  UNIHANS,
-  PINYINS
-} = require('./dict')
+'use strict'
+
+const DICT = require('./dict')
+const UNIHANS = DICT.UNIHANS
+const PINYINS = DICT.PINYINS
 
 const FIRST_PINYIN_UNIHAN = '\u963F'
 const LAST_PINYIN_UNIHAN = '\u9FFF'

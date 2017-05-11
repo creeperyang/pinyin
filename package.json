@@ -24,12 +24,12 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "pretest": "babel --presets babel-preset-power-assert test --out-dir test-compiled",
+    "pretest": "babel --presets=power-assert,es2015 test --out-dir test-compiled",
     "test": "npm run lint && npm run test-notsupport && npm run test-common",
     "test-common": "NODE_ICU_DATA='node_modules/full-icu' mocha test-compiled/index.spec.js",
     "test-notsupport": "mocha test-compiled/notSupport.spec.js",
     "lint": "eslint src test",
-    "prepublish": "babel --presets babel-preset-es2015 src --out-dir dist"
+    "prepublish": "babel --presets=es2015 src --out-dir dist"
   },
   "repository": {
     "type": "git",

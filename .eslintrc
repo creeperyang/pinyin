@@ -1,0 +1,15 @@
+{
+  "extends": "standard",
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "brace-style": ["off", "stroustrup", { "allowSingleLine": true }]
+  },
+  "globals": {
+    "it": true,
+    "describe": true
+  }
+}

@@ -106,9 +106,9 @@ function onChange() {
     var lastToken;
     tokens.forEach(function (v, i) {
       if (v.type === 2) {
-        pinyin += pinyin && lastToken.target !== ' ' ? ' ' + format(v.target) : format(v.target);
+        pinyin += pinyin && !/\n|\s/.test(lastToken.target) ? ' ' + format(v.target) : format(v.target);
       } else {
-        pinyin += v.target;
+        pinyin += (lastToken && lastToken.type === 2 ? ' ' : '') + v.target;
       }
       lastToken = v;
     });

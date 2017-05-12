@@ -51,15 +51,19 @@ module.exports = [
       path: path.resolve(ROOT, 'docs'),
       filename: 'app.js'
     },
+    context: path.resolve(ROOT, 'docs'),
+    resolve: {
+      modules: [ROOT, 'node_modules']
+    },
     entry: path.resolve(ROOT, 'docs/_source/app.js'),
     module: { rules: RULES },
     plugins: [
       new HtmlWebpackPlugin({
         title: 'tiny-pinyin',
-        template: 'docs/_source/index.html',
-        filename: 'docs/index.html'
+        template: '_source/index.html',
+        filename: 'index.html'
       }),
-      new ExtractTextPlugin('docs/app.css')
+      new ExtractTextPlugin('app.css')
     ]
   }
 ]

@@ -8,19 +8,25 @@
     "test": "test"
   },
   "devDependencies": {
+    "autoprefixer": "^7.0.1",
     "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-power-assert": "^1.0.0",
+    "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
     "full-icu": "^1.0.3",
     "html-webpack-plugin": "^2.28.0",
     "mocha": "^3.3.0",
+    "postcss-loader": "^2.0.5",
     "power-assert": "^1.4.2",
+    "style-loader": "^0.17.0",
     "webpack": "^2.4.1"
   },
   "scripts": {
@@ -28,8 +34,11 @@
     "test": "npm run lint && npm run test-notsupport && npm run test-common",
     "test-common": "NODE_ICU_DATA='node_modules/full-icu' mocha test-compiled/index.spec.js",
     "test-notsupport": "mocha test-compiled/notSupport.spec.js",
-    "lint": "eslint src test",
-    "prepublish": "babel --presets=es2015 src --out-dir dist"
+    "lint": "eslint src test scripts/{*.js,pre-commit}",
+    "prepublish": "babel --presets=es2015 src --out-dir dist",
+    "build:doc": "webpack --config scripts/webpack.config.js --display-error-details",
+    "install-hook": "cd scripts && chmod +x install-hooks.sh && ./install-hooks.sh",
+    "uninstall-hook": "cd scripts && chmod +x uninstall-hooks.sh && ./uninstall-hooks.sh"
   },
   "repository": {
     "type": "git",

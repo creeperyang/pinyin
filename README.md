@@ -8,6 +8,8 @@
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
 3. 同时支持 **node.js和浏览器** 。
 
+[![Demo](https://cloud.githubusercontent.com/assets/8046480/25986097/a86896c2-3720-11e7-9bfe-17285f8005f0.png)](https://creeperyang.github.io/pinyin/)
+
 ## 安装和使用
 
 安装：`$ npm i tiny-pinyin --save`

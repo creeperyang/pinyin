@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const ChildProcess = require('child_process')
+const path = require('path')
+
+const cwd = path.resolve(__dirname, '../..')
+
+console.log('Will exec pre-commit hook. Run command with --no-verify if you want to skip the hook.\n')
+
+ChildProcess.exec('npm test', { cwd }, (err, stdout, stderr) => {
+  if (err) {
+    console.error(err)
+    process.exit(1)
+  }
+  console.log(stdout)
+  console.log('\npre-commit hook done!')
+})

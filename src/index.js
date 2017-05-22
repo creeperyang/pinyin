@@ -1,8 +1,6 @@
 'use strict'
 
 const DICT = require('./dict')
-const UNIHANS = DICT.UNIHANS
-const PINYINS = DICT.PINYINS
 
 const FIRST_PINYIN_UNIHAN = '\u963F'
 const LAST_PINYIN_UNIHAN = '\u9FFF'
@@ -28,8 +26,19 @@ function isSupported (force) {
 }
 
 function genToken (ch) {
+  // Access DICT here, give the chance to patch DICT.
+  const UNIHANS = DICT.UNIHANS
+  const PINYINS = DICT.PINYINS
+  const EXCEPTIONS = DICT.EXCEPTIONS
   const token = {
     source: ch
+  }
+
+  // First check EXCEPTIONS map, then search with UNIHANS table.
+  if (ch in EXCEPTIONS) {
+    token.type = PINYIN
+    token.target = EXCEPTIONS[ch]
+    return token
   }
 
   let offset = -1

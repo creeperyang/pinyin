@@ -11,3 +11,5 @@ matrix:
   allow_failures:
     - node_js: "5"
     - node_js: "4"
+addons:
+  sauce_connect: true

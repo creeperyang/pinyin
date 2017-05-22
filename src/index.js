@@ -12,6 +12,18 @@ const UNKNOWN = 3
 let supported = null
 let COLLATOR
 
+function patchDict(patchers) {
+  if (!patchers) return
+  if (typeof patchers === 'function') {
+    patchers = [patchers]
+  }
+  if (patchers.forEach) {
+    patchers.forEach(p => {
+      typeof p === 'function' && p(DICT)
+    })
+  }
+}
+
 function isSupported (force) {
   if (!force && supported !== null) {
     return supported
@@ -118,6 +130,7 @@ function parse (str) {
 module.exports = {
   isSupported,
   parse,
+  patchDict,
   convertToPinyin (str, separator, lowerCase) {
     return parse(str).map(v => {
       if (lowerCase && v.type === PINYIN) {

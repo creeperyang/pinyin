@@ -8,6 +8,27 @@ describe('PinYin', () => {
       assert(PinYin.isSupported() === true)
     })
   })
+  describe('#patchDict()', () => {
+    it('should patch dict correctly', () => {
+      let oriDict
+      let oriPINYINS
+      PinYin.patchDict(dict => {
+        oriDict = dict
+        oriPINYINS = dict.PINYINS
+      })
+      assert.doesNotThrow(PinYin.patchDict)
+      PinYin.patchDict([
+        dict => {
+          assert(oriDict === dict)
+          dict.PINYINS = ['hi']
+        },
+        dict => {
+          assert.deepEqual(oriDict.PINYINS, ['hi'])
+          dict.PINYINS = oriPINYINS
+        }
+      ])
+    })
+  })
   describe('#parse()', () => {
     it('should throw when argument is not string', () => {
       assert.throws(() => PinYin.parse())

@@ -10,11 +10,7 @@
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
 3. 同时支持 **node.js和浏览器** 。
 
-[![Demo](https://cloud.githubusercontent.com/assets/8046480/25986097/a86896c2-3720-11e7-9bfe-17285f8005f0.png)](https://creeperyang.github.io/pinyin/)
-
-可点击上面的图片体验[线上版本](https://creeperyang.github.io/pinyin/)。
-
-**注意：不支持多音字；`node 6/7`，最新`safari/ios/chrome/firefox`测试通过，`ie/edge`测试不通过，`android`需要更新字典。**
+**注意：不支持多音字；`node 6/7`，最新 `safari/ios/chrome/firefox` 测试通过，`ie/edge` 测试不通过，`android` 需要更新字典。**
 
 ## 安装和使用
 
@@ -40,6 +36,12 @@ npm i --save full-icu
 通过安装`full-icu`，我们可以安装缺失的`ICU`数据文件，使`node.js`支持中文。通过`node --icu-data-dir=node_modules/full-icu test.js`即可使`node.js`支持全语言，正确把汉字转为拼音。
 
 更多相关信息可以参考 [full-icu-npm](https://github.com/unicode-org/full-icu-npm)，或者 [Node Intl](https://github.com/nodejs/node/wiki/Intl)。
+
+## Demo
+
+[![Demo](https://cloud.githubusercontent.com/assets/8046480/25986097/a86896c2-3720-11e7-9bfe-17285f8005f0.png)](https://creeperyang.github.io/pinyin/)
+
+可点击上面的图片体验[线上版本](https://creeperyang.github.io/pinyin/)。
 
 ## API
 

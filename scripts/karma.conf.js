@@ -2,7 +2,7 @@
 // Generated on Sat May 20 2017 12:48:22 GMT+0800 (CST)
 
 module.exports = function (config) {
-  config.set({
+  const setting = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../',
@@ -67,5 +67,31 @@ module.exports = function (config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  }
+
+  // Update config for sauce labs
+  if (process.env.SAUCE) {
+    if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
+      console.log('Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.')
+      process.exit(1)
+    }
+    Object.assign(setting, {
+      sauceLabs: {
+        testName: 'Pinyin Tests',
+        recordScreenshots: false,
+        connectOptions: {
+          port: 5757,
+          logfile: 'sauce_connect.log'
+        },
+        public: 'public'
+      },
+      customLaunchers: require('./browsers'),
+      browsers: Object.keys(require('./browsers')),
+      reporters: ['dots', 'saucelabs'],
+      // Increase timeout in case connection in CI is slow
+      captureTimeout: 400000,
+      singleRun: true
+    })
+  }
+  config.set(setting)
 }

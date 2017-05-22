@@ -2,6 +2,8 @@
 
 [English Doc](./README_EN.md)
 
+[![Build Status](https://saucelabs.com/browser-matrix/creeperyang.svg)](https://saucelabs.com/beta/builds/8f2adabb0c47479fbcf50d1bbcdf8ecb)
+
 轻量的 **汉字转拼音** JavaScript库。可以轻松获取汉字的拼音。有以下特性：
 
 1. 300行左右代码，内置一个很小的字典。
@@ -12,9 +14,11 @@
 
 可点击上面的图片体验[线上版本](https://creeperyang.github.io/pinyin/)。
 
+**注意：不支持多音字；`node 6/7`，最新`safari/ios/chrome/firefox`测试通过，`ie/edge`测试不通过，`android`需要更新字典。**
+
 ## 安装和使用
 
-安装：`$ npm i --save tiny-pinyin`
+[![NPM](https://nodei.co/npm/tiny-pinyin.png?compact=true)](https://nodei.co/npm/tiny-pinyin/)
 
 使用:
 
@@ -59,7 +63,7 @@ npm i --save full-icu
 }
 ```
 
-**请注意，当字符串为**
+**请注意，当字符串为：**
 
 1. 拉丁字母，即ascii码`0-255`，不处理，原样输出，即`source/target`一致，`type`为`1`。
 2. 中文，即unicode `\u4e00-\u9FFF` ，转成拼音，`type`为`2`。
@@ -76,6 +80,12 @@ npm i --save full-icu
 ```js
 pinyin.convertToPinyin('我们和他们', '-', true) // wo-men-he-ta-men
 ```
+
+### 4. `pinyin.patchDict(fn)`
+
+- `fn`，`function`类型，接受参数为当前使用的字典对象`DICT`，可以修改`DICT.UNIHANS/DICT.PINYINS/DICT.EXCEPTIONS`来修改字典。另外，`fn`可以是数组，数组的每个元素为函数类型。
+
+其中：`DICT.UNIHANS/DICT.PINYINS`两者相对应，记录边界汉字和其对应拼音。`DICT.EXCEPTIONS`是 **例外** 字典，为`汉字-拼音`的键值对，拥有更高优先级。
 
 ## 致谢
 

@@ -1,15 +1,17 @@
 {
-  "extends": "standard",
-  "env": {
-    "node": true
+  extends: 'standard',
+  env: {
+    node: true
   },
-  "rules": {
-    "arrow-parens": [2, "as-needed"],
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "brace-style": ["off", "stroustrup", { "allowSingleLine": true }]
+  rules: {
+    'arrow-parens': [2, 'as-needed'],
+    indent: ['error', 2, { 'SwitchCase': 1 }],
+    'brace-style': ['off', 'stroustrup', { 'allowSingleLine': true }],
+    'operator-linebreak': [2, 'before']
   },
-  "globals": {
-    "it": true,
-    "describe": true
+  globals: {
+    it: true,
+    describe: true,
+    before: true
   }
 }

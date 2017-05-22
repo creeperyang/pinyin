@@ -12,7 +12,7 @@ const UNKNOWN = 3
 let supported = null
 let COLLATOR
 
-function patchDict(patchers) {
+function patchDict (patchers) {
   if (!patchers) return
   if (typeof patchers === 'function') {
     patchers = [patchers]

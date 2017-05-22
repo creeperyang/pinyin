@@ -3,19 +3,19 @@
 module.exports = function patcher (DICT) {
   // Update EXCEPTIONS dict.
   DICT.EXCEPTIONS = {
-    '\u55f2': 'DIA', //DIE 嗲
-    '\u78a1': 'ZHOU', //DU 碡
-    '\u8052': 'GUO', //GUA 聒
-    '\u7094': 'QUE', //GUI 炔
-    '\u86b5': 'KE', //HE 蚵
-    '\u7809': 'HUA', //HUO 砉
-    '\u5b37': 'MO', //MA 嬷 新增
-    '\u8e4a': 'XI', //QI 蹊
-    '\u4e2c': 'PAN', //QIANG 丬
-    '\u9730': 'XIAN', //SAN 霰
-    '\u8c49': 'CHI', //SHI 豉
-    '\u9967': 'XING', //TANG 饧
-    '\u5e27': 'ZHEN', //ZHENG 帧
+    '\u55f2': 'DIA', // DIE 嗲
+    '\u78a1': 'ZHOU', // DU 碡
+    '\u8052': 'GUO', // GUA 聒
+    '\u7094': 'QUE', // GUI 炔
+    '\u86b5': 'KE', // HE 蚵
+    '\u7809': 'HUA', // HUO 砉
+    '\u5b37': 'MO', // MA 嬷 新增
+    '\u8e4a': 'XI', // QI 蹊
+    '\u4e2c': 'PAN', // QIANG 丬
+    '\u9730': 'XIAN', // SAN 霰
+    '\u8c49': 'CHI', // SHI 豉
+    '\u9967': 'XING', // TANG 饧
+    '\u5e27': 'ZHEN', // ZHENG 帧
     '\u828e': 'XIONG', // 芎
     '\u8c01': 'SHUI', // 谁
     '\u94b6': 'KE' // 钶

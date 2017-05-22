@@ -20,7 +20,7 @@
 
 ```js
 // test.js
-const pinyin = require('tiny-pinyin')
+const pinyin = require('tiny-pinyin') // Or require('tiny-pinyin/dist/browser') for browser
 
 if (pinyin.isSupported()) {
   pinyin.convertToPinyin('我') // WO

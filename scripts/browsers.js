@@ -12,13 +12,15 @@ module.exports = {
     group: 1
   },
   // Seems Edge has some problem.
-  /*sl_edge: {
+  /*
+  sl_edge: {
     base: 'SauceLabs',
     browserName: 'MicrosoftEdge',
     version: '14.14393',
     platform: 'Windows 10',
     group: 2
-  },*/
+  },
+  */
   sl_safari: {
     base: 'SauceLabs',
     browserName: 'safari',
@@ -36,7 +38,8 @@ module.exports = {
     group: 3
   }
   // We should patch dict for Android.
-  /*,
+  /*
+  ,
   sl_android_4_4: {
     base: 'SauceLabs',
     browserName: 'Browser',
@@ -54,5 +57,6 @@ module.exports = {
     platformVersion: '6.0',
     deviceName: 'Android Emulator',
     group: 4
-  }*/
+  }
+  */
 }

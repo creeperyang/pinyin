@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function patcher (DICT) {
+exports = module.exports = function patcher (DICT) {
   // Update EXCEPTIONS dict.
   DICT.EXCEPTIONS = {
     '\u55f2': 'DIA', // DIE 嗲
@@ -36,4 +36,27 @@ module.exports = function patcher (DICT) {
   DICT.UNIHANS[178] = '\u5222' // LING: 伶 --> 刢
   DICT.UNIHANS[252] = '\u5a1d' // POU: 剖 --> 娝
   DICT.UNIHANS[330] = '\u5078' // TOU: 偷 --> 偸
+}
+
+exports.shouldPatch = function shouldPatch (toToken) {
+  if (typeof toToken !== 'function') return false
+  // Special unihans that get incorrect pinyins.
+  if (
+    toToken('\u4f15').target === 'FOU'
+    && toToken('\u4eda').target === 'XIA'
+    && toToken('\u8bcc').target === 'ZHONG'
+    && toToken('\u5a64').target === 'CHONG'
+    && toToken('\u8160').target === 'CONG'
+    && toToken('\u6538').target === 'YONG'
+    && toToken('\u4e6f').target === 'HOU'
+    && toToken('\u5215').target === 'LENG'
+    && toToken('\u4f5d').target === 'GONG'
+    && toToken('\u72bf').target === 'HUAI'
+    && toToken('\u5217').target === 'LIAO'
+    && toToken('\u5222').target === 'LIN'
+    && toToken('\u94b6').target === 'E'
+  ) {
+    return true
+  }
+  return false
 }

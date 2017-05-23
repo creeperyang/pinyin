@@ -1,18 +1,8 @@
 const assert = require('assert')
 const { polyphone, common } = require('./hanziDict')
-let PinYin
+const PinYin = require('../src')
 
 describe('PinYin', () => {
-  before(done => {
-    // Dynamically load lib
-    if (typeof window === 'object' && window.window === window) {
-      PinYin = require('../src/browser')
-    } else {
-      PinYin = require('../src/index')
-    }
-    done()
-  })
-
   describe('#isSupported()', () => {
     it('should return true when supported', () => {
       assert(PinYin.isSupported() === true)

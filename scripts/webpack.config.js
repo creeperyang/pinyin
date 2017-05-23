@@ -29,7 +29,7 @@ const ROOT = path.resolve(__dirname, '..')
 module.exports = [
   // browser version tiny-pinyin
   {
-    entry: path.resolve(ROOT, 'src/patched.js'),
+    entry: path.resolve(ROOT, 'src/index.js'),
     output: {
       filename: 'docs/browser.js',
       path: ROOT,

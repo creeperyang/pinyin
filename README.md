@@ -8,19 +8,19 @@
 
 1. 300行左右代码，内置一个很小的字典。
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
-3. 同时支持 **node.js和浏览器** 。
+3. 同时支持 **`node.js (4-7)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
 
-**注意：不支持多音字；`node 6/7`，最新 `safari/ios/chrome/firefox` 测试通过，`ie/edge` 测试不通过，`android` 需要更新字典。**
+**注意：不支持多音字；`ie/edge` 测试未通过。**
 
 ## 安装和使用
 
 [![NPM](https://nodei.co/npm/tiny-pinyin.png?compact=true)](https://nodei.co/npm/tiny-pinyin/)
 
-使用:
+使用（浏览器端使用可通过`webpack`等打包，或直接引入demo中[已打包好的JS](https://creeperyang.github.io/pinyin/browser.js)）:
 
 ```js
 // test.js
-const pinyin = require('tiny-pinyin') // Or require('tiny-pinyin/dist/browser') for browser
+const pinyin = require('tiny-pinyin')
 
 if (pinyin.isSupported()) {
   pinyin.convertToPinyin('我') // WO
@@ -39,7 +39,9 @@ npm i --save full-icu
 
 ## Demo
 
-[![Demo](https://cloud.githubusercontent.com/assets/8046480/25986097/a86896c2-3720-11e7-9bfe-17285f8005f0.png)](https://creeperyang.github.io/pinyin/)
+<a href="https://creeperyang.github.io/pinyin/">
+<img src="https://cloud.githubusercontent.com/assets/8046480/25986097/a86896c2-3720-11e7-9bfe-17285f8005f0.png" width="295" height="421" alt="Demo" />
+</a>
 
 可点击上面的图片体验[线上版本](https://creeperyang.github.io/pinyin/)。
 

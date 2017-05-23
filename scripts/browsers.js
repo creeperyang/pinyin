@@ -1,33 +1,28 @@
 module.exports = {
+  // pc
   sl_chrome: {
     base: 'SauceLabs',
     browserName: 'chrome',
-    version: 'latest-2',
-    group: 0
+    version: 'latest-2'
   },
   sl_firefox: {
     base: 'SauceLabs',
     browserName: 'firefox',
-    version: 'latest-1',
-    group: 1
+    version: 'latest-1'
   },
-  // Seems Edge has some problem.
-  /*
-  sl_edge: {
-    base: 'SauceLabs',
-    browserName: 'MicrosoftEdge',
-    version: '14.14393',
-    platform: 'Windows 10',
-    group: 2
-  },
-  */
-  sl_safari: {
+  sl_mac_safari: {
     base: 'SauceLabs',
     browserName: 'safari',
     version: '10.0',
-    platform: 'macOS 10.12',
-    group: 3
+    platform: 'macOS 10.12'
   },
+  // sl_edge: {
+  //   base: 'SauceLabs',
+  //   browserName: 'MicrosoftEdge',
+  //   version: 'latest',
+  //   platform: 'Windows 10'
+  // },
+  // mobile
   sl_ios_safari: {
     base: 'SauceLabs',
     browserName: 'Safari',
@@ -36,10 +31,7 @@ module.exports = {
     platformVersion: '10.2',
     deviceName: 'iPhone 7 Plus Simulator',
     group: 3
-  }
-  // We should patch dict for Android.
-  /*
-  ,
+  },
   sl_android_4_4: {
     base: 'SauceLabs',
     browserName: 'Browser',
@@ -58,5 +50,4 @@ module.exports = {
     deviceName: 'Android Emulator',
     group: 4
   }
-  */
 }

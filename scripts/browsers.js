@@ -31,14 +31,15 @@ module.exports = {
     platformVersion: '10.2',
     deviceName: 'iPhone 7 Plus Simulator'
   },
-  sl_android_5_1: {
-    base: 'SauceLabs',
-    browserName: 'Browser',
-    appiumVersion: '1.6.4',
-    platformName: 'Android',
-    platformVersion: '5.1',
-    deviceName: 'Android Emulator'
-  },
+  // Android 4.4-5: should patch dict.
+  // sl_android_5_1: {
+  //   base: 'SauceLabs',
+  //   browserName: 'Browser',
+  //   appiumVersion: '1.6.4',
+  //   platformName: 'Android',
+  //   platformVersion: '5.1',
+  //   deviceName: 'Android Emulator'
+  // },
   sl_android_6: {
     base: 'SauceLabs',
     browserName: 'Chrome',

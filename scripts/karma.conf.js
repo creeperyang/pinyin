@@ -77,11 +77,12 @@ module.exports = function (config) {
     }
     Object.assign(setting, {
       sauceLabs: {
-        testName: 'Pinyin Tests',
+        testName: 'tiny-pinyin unit tests',
         recordScreenshots: false,
         connectOptions: {
           port: 5757,
-          logfile: 'sauce_connect.log'
+          logfile: 'sauce_connect.log',
+          'no-ssl-bump-domains': 'all' // Ignore SSL error on Android emulator
         },
         public: 'public'
       },
@@ -89,7 +90,8 @@ module.exports = function (config) {
       browsers: Object.keys(require('./browsers')),
       reporters: ['dots', 'saucelabs'],
       // Increase timeout in case connection in CI is slow
-      captureTimeout: 400000,
+      captureTimeout: 320000,
+      browserNoActivityTimeout: 320000,
       singleRun: true
     })
   }

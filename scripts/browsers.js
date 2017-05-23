@@ -29,17 +29,15 @@ module.exports = {
     appiumVersion: '1.6.4',
     platformName: 'iOS',
     platformVersion: '10.2',
-    deviceName: 'iPhone 7 Plus Simulator',
-    group: 3
+    deviceName: 'iPhone 7 Plus Simulator'
   },
-  sl_android_4_4: {
+  sl_android_5_1: {
     base: 'SauceLabs',
     browserName: 'Browser',
     appiumVersion: '1.6.4',
     platformName: 'Android',
-    platformVersion: '4.4',
-    deviceName: 'Android Emulator',
-    group: 4
+    platformVersion: '5.1',
+    deviceName: 'Android Emulator'
   },
   sl_android_6: {
     base: 'SauceLabs',
@@ -47,7 +45,6 @@ module.exports = {
     appiumVersion: '1.6.4',
     platformName: 'Android',
     platformVersion: '6.0',
-    deviceName: 'Android Emulator',
-    group: 4
+    deviceName: 'Android Emulator'
   }
 }

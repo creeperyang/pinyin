@@ -1,4 +1,4 @@
-# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin)
+# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin)
 
 [English Doc](./README_EN.md)
 

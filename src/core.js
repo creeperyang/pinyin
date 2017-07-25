@@ -9,7 +9,7 @@ const LATIN = 1
 const PINYIN = 2
 const UNKNOWN = 3
 
-let supported = null
+let SUPPORTED = null
 let COLLATOR
 
 function patchDict (patchers) {
@@ -25,16 +25,16 @@ function patchDict (patchers) {
 }
 
 function isSupported (force) {
-  if (!force && supported !== null) {
-    return supported
+  if (!force && SUPPORTED !== null) {
+    return SUPPORTED
   }
   if (typeof Intl === 'object' && Intl.Collator) {
     COLLATOR = new Intl.Collator(['zh-Hans-CN', 'zh-CN'])
-    supported = Intl.Collator.supportedLocalesOf(['zh-CN']).length === 1
+    SUPPORTED = Intl.Collator.supportedLocalesOf(['zh-CN']).length === 1
   } else {
-    supported = false
+    SUPPORTED = false
   }
-  return supported
+  return SUPPORTED
 }
 
 function genToken (ch) {

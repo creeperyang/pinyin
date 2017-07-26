@@ -1,8 +1,12 @@
 {
   "name": "tiny-pinyin",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "convert hanzi to pinyin",
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "directories": {
     "doc": "docs",
     "test": "test"

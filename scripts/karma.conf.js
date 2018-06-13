@@ -75,16 +75,19 @@ module.exports = function (config) {
       console.log('Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.')
       process.exit(1)
     }
+
     Object.assign(setting, {
       sauceLabs: {
         testName: 'tiny-pinyin unit tests',
         recordScreenshots: false,
+        recordVideo: false,
         connectOptions: {
           port: 5757,
           logfile: 'sauce_connect.log',
-          'no-ssl-bump-domains': 'all' // Ignore SSL error on Android emulator
+          noSslBumpDomains: 'all' // Ignore SSL error on Android emulator
         },
-        public: 'public'
+        public: 'public',
+        tunnelIdentifier: 'tiny-pinyin ' + (new Date()).getTime()
       },
       customLaunchers: require('./browsers'),
       browsers: Object.keys(require('./browsers')),
@@ -94,6 +97,13 @@ module.exports = function (config) {
       browserNoActivityTimeout: 320000,
       singleRun: true
     })
+
+    // Special config for travis
+    if (process.env.TRAVIS) {
+      setting.sauceLabs.build = process.env.TRAVIS_BUILD_NUMBER + '-' + process.env.TRAVIS_BUILD_ID
+      setting.sauceLabs.startConnect = false
+      setting.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_ID
+    }
   }
   config.set(setting)
 }

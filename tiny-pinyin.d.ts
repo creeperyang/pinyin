@@ -2,7 +2,9 @@ declare namespace TinyPinyin {
   interface DICT {
     PINYINS: string[]
     UNIHANS: string[]
-    EXCEPTIONS: string[]
+    EXCEPTIONS: {
+      [code: string]: string
+    }
   }
   interface Patcher {
     (DICT: DICT): void

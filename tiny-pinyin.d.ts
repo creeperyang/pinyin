@@ -9,7 +9,7 @@ declare namespace TinyPinyin {
   interface Patcher {
     (DICT: DICT): void
   }
-  export function isSupported(force: boolean): boolean
+  export function isSupported(force?: boolean): boolean
   export function parse(
     str: string
   ): {
@@ -17,7 +17,7 @@ declare namespace TinyPinyin {
     source: string
     target: string
   }[]
-  export function convertToPinyin(str: string, separator: string, lowerCase: boolean): string
+  export function convertToPinyin(str: string, separator?: string, lowerCase?: boolean): string
   export function patchDict(patcher: Patcher | Patcher[]): void
 }
 

@@ -8,7 +8,7 @@
 
 1. 300行左右代码，内置一个很小的字典。
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
-3. 同时支持 **`node.js (4-7)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
+3. 同时支持 **`node.js (4-10)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
 
 **注意：不支持多音字；`ie/edge` 测试未通过。**
 
@@ -47,6 +47,8 @@ npm i --save full-icu
 
 ## API
 
+*已通过 [c6b3ba9](https://github.com/creeperyang/pinyin/commit/c6b3ba9fcd66e0d1225ddbc95fc84c6fa75e664e)@zhanba 支持 typescript typings。*
+
 ### 1. `pinyin.isSupported([forceRedetect])`
 
 - `forceRedetect`，`bool`类型，是否强制重新检测。
@@ -73,7 +75,7 @@ npm i --save full-icu
 2. 中文，即unicode `\u4e00-\u9FFF` ，转成拼音，`type`为`2`。
 3. 其它，即以上两者以外的字符，不处理，原样输出，`type`为`3`。
 
-### 3. `pinyin.convertToPinyin(string, separator, lowerCase)`
+### 3. `pinyin.convertToPinyin(string[, separator[, lowerCase]])`
 
 - `string`，待转成拼音的字符串。
 - `separator`，拼音的分隔符，默认`''`。比如设置`-`，则`我们`转成`WO-MEN`。
@@ -85,7 +87,7 @@ npm i --save full-icu
 pinyin.convertToPinyin('我们和他们', '-', true) // wo-men-he-ta-men
 ```
 
-### 4. `pinyin.patchDict(fn)`
+### 4. `pinyin.patchDict(fn|[fn])`
 
 - `fn`，`function`类型，接受参数为当前使用的字典对象`DICT`，可以修改`DICT.UNIHANS/DICT.PINYINS/DICT.EXCEPTIONS`来修改字典。另外，`fn`可以是数组，数组的每个元素为函数类型。
 

@@ -1,6 +1,9 @@
 sudo: false
 language: node_js
 node_js:
+  - "10"
+  - "9"
+  - "8"
   - "7"
   - "6"
   - "5"
@@ -13,3 +16,5 @@ matrix:
     - node_js: "4"
 addons:
   sauce_connect: true
+after_success:
+  - "npm run test:sauce"

@@ -42,7 +42,7 @@
   },
   "scripts": {
     "pretest": "babel --presets=power-assert,es2015 test --out-dir test-compiled",
-    "test": "npm run lint && npm run test-notsupport && npm run test-common && npm run test:sauce",
+    "test": "npm run lint && npm run test-notsupport && npm run test-common",
     "test-common": "NODE_ICU_DATA='node_modules/full-icu' mocha test-compiled/index.spec.js",
     "test-notsupport": "mocha test-compiled/notSupport.spec.js",
     "test:browser": "karma start scripts/karma.conf.js --single-run",

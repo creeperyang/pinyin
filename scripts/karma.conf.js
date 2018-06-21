@@ -1,31 +1,26 @@
-// Karma configuration
-// Generated on Sat May 20 2017 12:48:22 GMT+0800 (CST)
+'use strict'
 
 module.exports = function (config) {
   const setting = {
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../',
-
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha'],
+    port: 9876,
+    colors: true,
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_DEBUG,
+    autoWatch: false,
+    captureTimeout: 180000,
+    browserDisconnectTimeout: 180000,
+    browserDisconnectTolerance: 3,
+    browserNoActivityTimeout: 300000,
 
-    // list of files / patterns to load in the browser
     files: [
       'test/index.spec.js'
     ],
-
-    // list of files to exclude
-    exclude: [
-    ],
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    exclude: [],
     preprocessors: {
       'test/*.js': ['webpack']
     },
-
     webpack: {
       module: {
         rules: [{
@@ -37,36 +32,9 @@ module.exports = function (config) {
         }]
       }
     },
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
-
-    // web server port
-    port: 9876,
-
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
-
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_DEBUG,
-
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
-
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome', 'Firefox', 'Safari'],
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
-
-    // Concurrency level
-    // how many browser should be started simultaneous
-    concurrency: Infinity
+    reporters: ['progress'],
+    singleRun: true
   }
 
   // Update config for sauce labs
@@ -75,25 +43,34 @@ module.exports = function (config) {
       console.log('Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.')
       process.exit(1)
     }
+
+    const launchers = require('./browsers')
     Object.assign(setting, {
       sauceLabs: {
         testName: 'tiny-pinyin unit tests',
+        retryLimit: 2,
         recordScreenshots: false,
-        connectOptions: {
-          port: 5757,
-          logfile: 'sauce_connect.log',
-          'no-ssl-bump-domains': 'all' // Ignore SSL error on Android emulator
+        recordVideo: false,
+        startConnect: false,
+        options: {
+          'selenium-version': '2.53.0',
+          'command-timeout': 600,
+          'idle-timeout': 600,
+          'max-duration': 5400
         },
-        public: 'public'
+        tunnelIdentifier: 'tiny-pinyin-' + (new Date()).getTime()
       },
-      customLaunchers: require('./browsers'),
-      browsers: Object.keys(require('./browsers')),
-      reporters: ['dots', 'saucelabs'],
-      // Increase timeout in case connection in CI is slow
-      captureTimeout: 320000,
-      browserNoActivityTimeout: 320000,
-      singleRun: true
+      customLaunchers: launchers,
+      browsers: Object.keys(launchers),
+      reporters: ['dots', 'saucelabs']
     })
+
+    // Special config for travis
+    if (process.env.TRAVIS) {
+      setting.sauceLabs.build = process.env.TRAVIS_BUILD_NUMBER + '-' + process.env.TRAVIS_BUILD_ID
+      setting.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_ID
+    }
   }
+
   config.set(setting)
 }

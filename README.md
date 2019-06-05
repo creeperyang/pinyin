@@ -1,4 +1,5 @@
 # tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_shield)
 
 [English Doc](./README_EN.md)
 
@@ -98,3 +99,7 @@ pinyin.convertToPinyin('我们和他们', '-', true) // wo-men-he-ta-men
 感谢博客[利用Android源码，轻松实现汉字转拼音功能](http://blog.coderclock.com/2017/04/04/android/2017-04-04/)，由这篇博客才知道Android库的相关代码和汉字转拼音的原理。
 
 非常感谢 [Android Contacts Source Code](https://android.googlesource.com/platform/packages/providers/ContactsProvider/+/0c49720fb3d58e346739c2ccd56ed2b739249e07/src/com/android/providers/contacts/HanziToPinyin.java)。本库由它启发，可以算作Java到JavaScript的一次转译。
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_large)

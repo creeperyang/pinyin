@@ -1,5 +1,4 @@
-# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_shield)
+# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_shield)
 
 [English Doc](./README_EN.md)
 

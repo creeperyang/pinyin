@@ -27,6 +27,8 @@ if (pinyin.isSupported()) {
 }
 ```
 
+注意在浏览器中使用时页面的charset 必须为utf-8 ，见[issue#21](https://github.com/creeperyang/pinyin/issues/21)
+
 一般情况下，我们的`node.js`只支持英文，所以，我们需要让`node.js`支持中文（`zh-Hans-CN`），即`pinyin.isSupported()`为`true`：
 
 ```bash

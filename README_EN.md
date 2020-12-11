@@ -25,6 +25,8 @@ if (pinyin.isSupported()) {
 }
 ```
 
+Note that the charset of the page must be utf-8 when used in a browser, see [issue#21](https://github.com/creeperyang/pinyin/issues/21).
+
 `node.js` default support English and if we want it support chinese(`zh-Hans-CN`), install `full-icu`:
 
 ```bash

@@ -1,19 +1,17 @@
 sudo: false
 language: node_js
 node_js:
+  - "15"
+  - "14"
+  - "12"
   - "10"
   - "9"
   - "8"
-  - "7"
-  - "6"
-  - "5"
-  - "4"
 scripts:
   - "npm test"
 matrix:
   allow_failures:
-    - node_js: "5"
-    - node_js: "4"
+    - node_js: "9"
 addons:
   sauce_connect: true
 after_success:

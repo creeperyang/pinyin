@@ -8,8 +8,7 @@
 
 1. 300行左右代码，内置一个很小的字典。
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
-3. 同时支持 **`node.js (4-12)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
-    - 但是travis配置将逐渐删除过时的node版本，也推荐使用在维护期的正式node版本。
+3. 同时支持 **`node.js (4-latest)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
 
 **注意：不支持多音字；`ie/edge` 测试未通过。**
 
@@ -39,6 +38,12 @@ npm i --save full-icu
 通过安装`full-icu`，我们可以安装缺失的`ICU`数据文件，使`node.js`支持中文。通过`node --icu-data-dir=node_modules/full-icu test.js`即可使`node.js`支持全语言，正确把汉字转为拼音。
 
 更多相关信息可以参考 [full-icu-npm](https://github.com/unicode-org/full-icu-npm)，或者 [Node Intl](https://github.com/nodejs/node/wiki/Intl)。
+
+### Important: node 13+ support full icu by default
+
+node 13 开始，node 默认开始完整的ICU支持，意味着我们不必再安装 `full-icu`。
+
+详情看<https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V13.md#notable-changes-16>。
 
 ## Demo
 

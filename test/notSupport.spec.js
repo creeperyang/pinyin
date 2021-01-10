@@ -4,9 +4,13 @@ const pinyin = require('../src')
 describe('pinyin', () => {
   describe('#isSupported()', () => {
     it('should return false when not support Intl or zh-CN language', () => {
+      const nodeVersion = process.versions.node || ''
+      const mainVersion = +nodeVersion.split('.')[0]
       // node 13+ now supports full icu by default.
-      if (!pinyin.isSupported()) {
+      if (mainVersion < 13) {
         assert(pinyin.isSupported() === false)
+      } else {
+        assert(pinyin.isSupported() === true)
       }
     })
   })

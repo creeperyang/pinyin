@@ -1,4 +1,4 @@
-# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_shield)
+# tiny-pinyin [![Build Status](https://travis-ci.org/creeperyang/pinyin.svg?branch=master)](https://travis-ci.org/creeperyang/pinyin) [![npm version](https://badge.fury.io/js/tiny-pinyin.svg)](https://badge.fury.io/js/tiny-pinyin) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcreeperyang%2Fpinyin?ref=badge_shield)
 
 [English Doc](./README_EN.md)
 
@@ -8,7 +8,8 @@
 
 1. 300行左右代码，内置一个很小的字典。
 2. 可以轻松处理 **6763** 个的常用汉字，其它汉字未测试，但应该有相当正确率，欢迎测试。
-3. 同时支持 **`node.js (4-10)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
+3. 同时支持 **`node.js (4-12)` 和 浏览器 (safari/chrome/firefox/android 6+/ios)** 。
+  - 但是travis配置将逐渐删除过时的node版本，也推荐使用在维护期的正式node版本。
 
 **注意：不支持多音字；`ie/edge` 测试未通过。**
 

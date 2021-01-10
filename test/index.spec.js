@@ -1,29 +1,29 @@
 const assert = require('assert')
 const { polyphone, common } = require('./hanziDict')
-const PinYin = require('../src')
+const pinyin = require('../src')
 
-describe('PinYin', () => {
+describe('pinyin', () => {
   describe('#isSupported()', () => {
     it('should return true when supported', () => {
-      assert(PinYin.isSupported() === true)
+      assert(pinyin.isSupported() === true)
     })
   })
   describe('#patchDict()', () => {
     it('should patch dict correctly', () => {
       let oriDict
       let oriPINYINS
-      PinYin.patchDict(dict => {
+      pinyin.patchDict(dict => {
         oriDict = dict
         oriPINYINS = dict.PINYINS
       })
-      assert.doesNotThrow(PinYin.patchDict)
-      PinYin.patchDict([
+      assert.doesNotThrow(pinyin.patchDict)
+      pinyin.patchDict([
         dict => {
           assert(oriDict === dict)
           dict.PINYINS = ['hi']
         },
         dict => {
-          assert.deepEqual(oriDict.PINYINS, ['hi'])
+          assert.deepStrictEqual(oriDict.PINYINS, ['hi'])
           dict.PINYINS = oriPINYINS
         }
       ])
@@ -31,13 +31,13 @@ describe('PinYin', () => {
   })
   describe('#parse()', () => {
     it('should throw when argument is not string', () => {
-      assert.throws(() => PinYin.parse())
+      assert.throws(() => pinyin.parse())
     })
     it('should return empty array when argument is empty string', () => {
-      assert.deepEqual(PinYin.parse(''), [])
+      assert.deepStrictEqual(pinyin.parse(''), [])
     })
     it('should parse hanzi to pinyin correctly', () => {
-      assert.deepEqual(PinYin.parse('我'), [{
+      assert.deepStrictEqual(pinyin.parse('我'), [{
         source: '我',
         type: 2,
         target: 'WO'
@@ -45,7 +45,7 @@ describe('PinYin', () => {
     })
     it('should parse latin to latin', () => {
       const latin = 'abcD0123'
-      const res = PinYin.parse(latin)
+      const res = pinyin.parse(latin)
       res.forEach((v, i) => {
         assert(v.source === latin[i])
         assert(v.type === 1)
@@ -54,44 +54,44 @@ describe('PinYin', () => {
     })
     it('should parse unknown character to unknown character', () => {
       const unknown = '\u4000'
-      const res = PinYin.parse(unknown)
-      assert.deepEqual(res[0].source, res[0].target)
+      const res = pinyin.parse(unknown)
+      assert.deepStrictEqual(res[0].source, res[0].target)
     })
   })
   describe('#convertToPinyin()', () => {
     it('should throw when argument is not string', () => {
-      assert.throws(() => PinYin.convertToPinyin())
+      assert.throws(() => pinyin.convertToPinyin())
     })
     it('should return empty string when argument is empty string', () => {
-      assert(PinYin.convertToPinyin('') === '')
+      assert(pinyin.convertToPinyin('') === '')
     })
     it('should convert hanzi to pinyin correctly', () => {
-      assert(PinYin.convertToPinyin('我') === 'WO')
+      assert(pinyin.convertToPinyin('我') === 'WO')
     })
     it('should convert latin to latin', () => {
       const latin = 'abcD0123'
-      assert(PinYin.convertToPinyin(latin) === latin)
+      assert(pinyin.convertToPinyin(latin) === latin)
     })
     it('should convert unknown character to unknown character', () => {
       const unknown = '\u4000\u4001'
-      assert(PinYin.convertToPinyin(unknown) === unknown)
+      assert(pinyin.convertToPinyin(unknown) === unknown)
     })
     it('should convert unknown character to unknown character', () => {
       const unknown = '\u4000\u4001'
-      assert(PinYin.convertToPinyin(unknown) === unknown)
+      assert(pinyin.convertToPinyin(unknown) === unknown)
     })
     it('should convert all common hanzi to pinyin correctly', () => {
       let res
       // common hanzi
       for (let item in common) {
         common[item].forEach(v => {
-          res = PinYin.convertToPinyin(v, '', true)
+          res = pinyin.convertToPinyin(v, '', true)
           assert(res === item)
         })
       }
       // polyphone hanzi
       for (let item in polyphone) {
-        res = PinYin.convertToPinyin(item, '', true)
+        res = pinyin.convertToPinyin(item, '', true)
         assert(polyphone[item].indexOf(res) > -1)
       }
     })

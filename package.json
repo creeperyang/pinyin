@@ -28,7 +28,7 @@
     "eslint-plugin-standard": "^3.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "full-icu": "^1.3.1",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^5.5.0",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.3.0",
@@ -40,7 +40,7 @@
     "postcss-loader": "^2.1.6",
     "power-assert": "^1.6.1",
     "style-loader": "^0.17.0",
-    "webpack": "^2.7.0"
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "pretest": "babel --presets=power-assert,es2015 test --out-dir test-compiled",
